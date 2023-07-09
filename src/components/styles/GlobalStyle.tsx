@@ -28,6 +28,8 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   body {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
+    background-color: #1D2A35;
+    color: #cbd5e1;
   }
 
   /* ===== Custom Scroll Bar ===== */
@@ -37,16 +39,21 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   }
   /* Track */
   ::-webkit-scrollbar-track {
+    background: #1D2A35;
   }
   /* Handle */
   ::-webkit-scrollbar-thumb {
+    background: #19252E;
   }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
+    background: #16202;
   }
 
   input[type=text] {
-
+    background-color: #1D2A35;
+    color: #cbd5e1;
+    caret-color: #05CE91;
   }
   input[type=text]:focus-visible {
     outline: none;

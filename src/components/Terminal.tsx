@@ -7,6 +7,7 @@ import React, {
   } from "react";
 
 import Output from "./Output";
+
 import TerminalPrefix from "./TerminalPrefix";
 import _ from "lodash";
 
@@ -45,8 +46,8 @@ const Terminal = () => {
 
     const [userInputValue, setUserInputValue] = useState("");
     // TODO: replace this with a welcome banner command
-    const [terminalHistory, setTerminalHistory] = useState<string[]>([""]);
-    const [rerender, setRerender] = useState(false);
+    const [terminalHistory, setTerminalHistory] = useState<string[]>(["about"]);
+    const [rerender, setRerender] = useState(false)
     const [autocompleteHints, setAutocompleteHints] = useState<string[]>([]);
     const [commandPointer, setCommandPointer] = useState(-1);
   
