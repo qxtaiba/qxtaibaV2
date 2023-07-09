@@ -1,13 +1,17 @@
 import React from 'react';
 import Terminal from './components/Terminal'; // Import the Terminal component
 import logo from './logo.svg';
-import './App.css';
+import GlobalStyle from "./components/styles/GlobalStyle";
 
 function App() {
   return (
-    <div className="App">
-      <Terminal /> {/* Render the Terminal component */}
-    </div>
+    <>
+      <h1 className="sr-only" aria-label="Terminal Portfolio">
+        Terminal Portfolio
+      </h1>
+          <GlobalStyle />
+            <Terminal />
+    </>
   );
 }
 
