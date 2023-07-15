@@ -101,6 +101,134 @@ const theme: Themes = {
       },
     },
   },
+  oceanic: {
+    id: "T_007",
+    name: "oceanic",
+    colors: {
+      body: "#2B303B",
+      scrollHandle: "#65737E",
+      scrollHandleHover: "#596164",
+      primary: "#6699CC",
+      secondary: "#99C794",
+      text: {
+        100: "#D8DEE9",
+        200: "#C0C5CE",
+        300: "#A7ADBA",
+      },
+    },
+  },
+  solarized: {
+    id: "T_008",
+    name: "solarized",
+    colors: {
+      body: "#002B36",
+      scrollHandle: "#586E75",
+      scrollHandleHover: "#4D6168",
+      primary: "#839496",
+      secondary: "#B58900",
+      text: {
+        100: "#FDF6E3",
+        200: "#EEE8D5",
+        300: "#93A1A1",
+      },
+    },
+  },
+  dracula: {
+    id: "T_009",
+    name: "dracula",
+    colors: {
+      body: "#282A36",
+      scrollHandle: "#44475A",
+      scrollHandleHover: "#3C3F52",
+      primary: "#BD93F9",
+      secondary: "#FF79C6",
+      text: {
+        100: "#F8F8F2",
+        200: "#6272A4",
+        300: "#6272A4",
+      },
+    },
+  },
+  nord: {
+    id: "T_010",
+    name: "nord",
+    colors: {
+      body: "#2E3440",
+      scrollHandle: "#4C566A",
+      scrollHandleHover: "#434C5E",
+      primary: "#81A1C1",
+      secondary: "#D8DEE9",
+      text: {
+        100: "#ECEFF4",
+        200: "#8FBCBB",
+        300: "#5E81AC",
+      },
+    },
+  },
+  material: {
+    id: "T_011",
+    name: "material",
+    colors: {
+      body: "#263238",
+      scrollHandle: "#546E7A",
+      scrollHandleHover: "#455A64",
+      primary: "#80CBC4",
+      secondary: "#FF9800",
+      text: {
+        100: "#ECEFF1",
+        200: "#B0BEC5",
+        300: "#90A4AE",
+      },
+    },
+  },
+  zenburn: {
+    id: "T_012",
+    name: "zenburn",
+    colors: {
+      body: "#3F3F3F",
+      scrollHandle: "#666666",
+      scrollHandleHover: "#555555",
+      primary: "#B2B2B2",
+      secondary: "#DFAF8F",
+      text: {
+        100: "#DCDCCC",
+        200: "#CCCCBC",
+        300: "#8F8F8F",
+      },
+    },
+  },
+  monokai: {
+    id: "T_013",
+    name: "monokai",
+    colors: {
+      body: "#272822",
+      scrollHandle: "#49483E",
+      scrollHandleHover: "#3E3D32",
+      primary: "#F92672",
+      secondary: "#A6E22E",
+      text: {
+        100: "#F8F8F2",
+        200: "#75715E",
+        300: "#75715E",
+      },
+    },
+  },
+  tomorrow: {
+    id: "T_014",
+    name: "tomorrow",
+    colors: {
+      body: "#FFFFFF",
+      scrollHandle: "#C5C8C6",
+      scrollHandleHover: "#B4B7B4",
+      primary: "#81A2BE",
+      secondary: "#C82829",
+      text: {
+        100: "#4D4D4C",
+        200: "#8E908C",
+        300: "#8E908C",
+      },
+    },
+  },
 };
 
 export default theme;
