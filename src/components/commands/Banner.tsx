@@ -5,7 +5,7 @@ import {
   } from "../styles/About.styled";
   import { LineFive, LineFour, LineOne, LineSix, LineThree, LineTwo } from "../styles/Banner.styled";
   
-  const About: React.FC = () => {
+  const Banner: React.FC = () => {
     return (
         <div>
           <pre>
@@ -27,5 +27,5 @@ import {
     );
   };
   
-  export default About;
+  export default Banner;
   

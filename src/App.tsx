@@ -2,8 +2,9 @@ import { createContext, useEffect, useState } from "react";
 import { DefaultTheme, ThemeProvider } from "styled-components";
 import { useTheme } from "./hooks/useTheme";
 import GlobalStyle from "./components/styles/GlobalStyle";
+import Banner from "./components/commands/Banner";
 import Terminal from "./components/Terminal";
-import { Container, OuterArea, Header, OrangeCircle, GreenCircle, RedCircle } from "./components/styles/App.styled";
+import { Wrapper, Window, TitleBar, DotHolder, Dot, MainContent } from "./components/styles/App.styled";
 
 export const ThemeContext = createContext<((theme: DefaultTheme) => void) | null>(null);
 
@@ -44,7 +45,7 @@ function App() {
       }
     }
   };
-  
+
   return (
     <>
       <h1 className="sr-only" aria-label="Terminal Portfolio">
@@ -52,21 +53,25 @@ function App() {
       </h1>
       {themeLoaded && (
         <ThemeContext.Provider value={switchTheme}>
-          <OuterArea>
-            <ThemeProvider theme={selectedTheme}>
-              <GlobalStyle />
-              <div>
-                <Header>
-                  <RedCircle />
-                  <OrangeCircle />
-                  <GreenCircle />
-                </Header>
-                <Container onScroll={handleScroll}>
-                  <Terminal />
-                </Container>
-              </div>
-            </ThemeProvider>
-          </OuterArea>
+          <Wrapper>
+            <Window>
+              <TitleBar>
+                <DotHolder>
+                  <Dot dotColor="#ED6A5E" /> 
+                  <Dot dotColor="#F5BF4F" /> 
+                  <Dot dotColor="#62C554" /> 
+                </DotHolder>
+              </TitleBar>
+              <ThemeProvider theme={selectedTheme}>
+                <>
+                  <GlobalStyle />
+                  <MainContent>
+                    <Terminal />
+                  </MainContent>
+                </>
+              </ThemeProvider>
+            </Window>
+          </Wrapper>
         </ThemeContext.Provider>
       )}
     </>
@@ -74,4 +79,3 @@ function App() {
 }
 
 export default App;
-

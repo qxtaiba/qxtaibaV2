@@ -3,7 +3,6 @@ import { split, trim, find, drop, uniqueId } from "lodash";
 
 import Output from "./Output";
 import TerminalPrefix from "./TerminalPrefix";
-import Banner from "./commands/Banner";
 
 import {
   CmdNotFound,
@@ -14,8 +13,6 @@ import {
   MobileSpan,
   Wrapper,
 } from "./styles/Terminal.styled";
-
-import { BannerWrapper } from "./styles/Banner.styled";
 
 // Move the type and context to separate files
 export const commands: string[] = ["help", "about", "banner", "themes", "skills", "github", "linkedin", "email", "resume", "credits"];
@@ -45,17 +42,15 @@ const Terminal = () => {
     rerender: false,
     autocompleteHints: [],
     commandPointer: -1,
-    shouldRenderBanner: true,
   });
 
-  const { userInputValue, terminalHistory, rerender, autocompleteHints, commandPointer, shouldRenderBanner } = state;
+  const { userInputValue, terminalHistory, rerender, autocompleteHints, commandPointer } = state;
 
   const clearTerminalHistory = () => {
     setState((prevState) => ({
       ...prevState,
       terminalHistory: [],
       autocompleteHints: [],
-      shouldRenderBanner: true,
     }));
   };
 
@@ -110,12 +105,6 @@ const Terminal = () => {
 
   return (
     <>
-      {shouldRenderBanner && (
-        <BannerWrapper>
-          <Banner />
-        </BannerWrapper>
-      )}
-
       <Wrapper ref={containerRef}>
         <Form onSubmit={handleUserSubmission}>
           <label htmlFor="terminal-input">

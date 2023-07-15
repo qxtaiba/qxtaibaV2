@@ -33,33 +33,6 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     color: ${({ theme }) => theme.colors?.text[100]};
   }
 
-  /* ===== Custom Scroll Bar ===== */
-  /* Width */
-  ::-webkit-scrollbar {
-    width: 7px;
-  }
-
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background-color: transparent;
-  }
-
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background-color: ${({ theme }) => theme.colors?.scrollHandle};
-    border-radius: 5px;
-  }
-
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background-color: ${({ theme }) => theme.colors?.scrollHandleHover};
-  }
-
-  /* Handle on drag */
-  ::-webkit-scrollbar-thumb:active {
-    background-color: ${({ theme }) => theme.colors?.scrollHandleHover};
-  }
-
   input[type=text] {
     background-color: ${({ theme }) => theme.colors?.body};
     color: ${({ theme }) => theme.colors?.text[100]};
