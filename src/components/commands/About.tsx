@@ -2,11 +2,12 @@ import {
   AboutWrapper,
   ProgressBar,
   Link
-  } from "../styles/About.styled";
-  
-  const About: React.FC = () => {
-    return (
-      <AboutWrapper data-testid="about">
+} from "../styles/About.styled";
+import { LineFive, LineFour, LineOne, LineSix, LineThree, LineTwo } from "../styles/Banner.styled";
+
+const About: React.FC = () => {
+  return (
+    <AboutWrapper data-testid="about">
       <div>
         <pre>
           &gt;   Name:         Qutaiba Al-Nuaimy
@@ -26,9 +27,8 @@ import {
           <br />
         </pre>
       </div>
-      </AboutWrapper>
-    );
-  };
-  
-  
-  export default About;
+    </AboutWrapper>
+  );
+};
+
+export default About;

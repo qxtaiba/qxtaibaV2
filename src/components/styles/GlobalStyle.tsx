@@ -3,7 +3,7 @@ import { normalize } from "styled-normalize";
 
 const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   ${normalize}
-  
+
   *, ::before, ::after {
     border-width: 0;
     border-style: solid;
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
     font-weight: inherit;
   }
 
-  img, svg, video, canvas, audio, 
+  img, svg, video, canvas, audio,
   iframe, embed, object {
     display: block;
   }
@@ -28,33 +28,44 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   body {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 500;
-    background-color: #1D2A35;
-    color: #cbd5e1;
+    font-size: 14px; /* Modify the font size here */
+    background-color: ${({ theme }) => theme.colors?.body};
+    color: ${({ theme }) => theme.colors?.text[100]};
   }
 
   /* ===== Custom Scroll Bar ===== */
-  /* width */
+  /* Width */
   ::-webkit-scrollbar {
-    width: 15px;
+    width: 7px;
   }
+
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #1D2A35;
+    background-color: transparent;
   }
+
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #19252E;
+    background-color: ${({ theme }) => theme.colors?.scrollHandle};
+    border-radius: 5px;
   }
+
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #16202;
+    background-color: ${({ theme }) => theme.colors?.scrollHandleHover};
+  }
+
+  /* Handle on drag */
+  ::-webkit-scrollbar-thumb:active {
+    background-color: ${({ theme }) => theme.colors?.scrollHandleHover};
   }
 
   input[type=text] {
-    background-color: #1D2A35;
-    color: #cbd5e1;
-    caret-color: #05CE91;
+    background-color: ${({ theme }) => theme.colors?.body};
+    color: ${({ theme }) => theme.colors?.text[100]};
+    caret-color: ${({ theme }) => theme.colors?.primary};
   }
+
   input[type=text]:focus-visible {
     outline: none;
   }

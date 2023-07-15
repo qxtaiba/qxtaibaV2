@@ -1,5 +1,7 @@
 import About from "./commands/About";
+import Banner from "./commands/Banner";
 import { OutputContainer, UsageDiv } from "./styles/Output.styled";
+import Themes from "./commands/Themes";
 import { termContext } from "./Terminal";
 import { useContext } from "react";
 
@@ -23,6 +25,8 @@ const Output: React.FC<Props> = ({ index, cmd }) => {
       {
         {
           about: <About />,
+          banner: <Banner />,
+          themes: <Themes />,
         }[cmd]
       }
     </OutputContainer>

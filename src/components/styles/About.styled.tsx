@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const AboutWrapper = styled.div`
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   p {
     margin-top: 0.5rem;
